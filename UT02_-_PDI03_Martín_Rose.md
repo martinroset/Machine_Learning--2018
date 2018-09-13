@@ -5,9 +5,10 @@ import pandas as pd
 import numpy as np
 import scipy
 from sklearn import preprocessing
+from sklearn import model_selection as sklMS
 ```
 
-# importando el dataset
+#### Importo el dataset "wine" (previamente descargado de UCI), e imprimo los primeros 10 registros del dataset
 
 
 ```python
@@ -229,58 +230,7 @@ dataset.head(10)
 
 
 
-
-```python
-dataset.min()
-
-```
-
-
-
-
-    Class                             1.00
-     Alcohol                         11.03
-     Malic acid                       0.74
-     Ash                              1.36
-     Alcalinity of ash               10.60
-    Magnesium                        70.00
-     Total phenols                    0.98
-    Flavanoids                        0.34
-    Nonflavanoid phenols              0.13
-    Proanthocyanins                   0.41
-    Color intensity                   1.28
-    Hue                               0.48
-    OD280/OD315 of diluted wines      1.27
-    Proline                         278.00
-    dtype: float64
-
-
-
-
-```python
-dataset.max()
-```
-
-
-
-
-    Class                              3.00
-     Alcohol                          14.83
-     Malic acid                        5.80
-     Ash                               3.23
-     Alcalinity of ash                30.00
-    Magnesium                        162.00
-     Total phenols                     3.88
-    Flavanoids                         5.08
-    Nonflavanoid phenols               0.66
-    Proanthocyanins                    3.58
-    Color intensity                   13.00
-    Hue                                1.71
-    OD280/OD315 of diluted wines       4.00
-    Proline                         1680.00
-    dtype: float64
-
-
+#### Utilizo el método "describe" de la librería pandas para obtener para cada atributo: mínimo, máximo, media, desviación standard, 1er, 2do, y 3er Cuartil.
 
 
 ```python
@@ -467,6 +417,8 @@ dataset.describe()
 
 
 
+#### Utilizo el método "info" de la librería "pandas" para saber qué tipos de atributos tengo en el dataset, y así ver si es necesario convertir datos del tipo "string" a "float". En éste caso no es necesario.
+
 
 ```python
 dataset.info()
@@ -476,12 +428,12 @@ dataset.info()
     RangeIndex: 178 entries, 0 to 177
     Data columns (total 14 columns):
     Class                           178 non-null int64
-     Alcohol                        178 non-null float64
-     Malic acid                     178 non-null float64
-     Ash                            178 non-null float64
-     Alcalinity of ash              178 non-null float64
+    Alcohol                         178 non-null float64
+    Malic acid                      178 non-null float64
+    Ash                             178 non-null float64
+    Alcalinity of ash               178 non-null float64
     Magnesium                       178 non-null int64
-     Total phenols                  178 non-null float64
+    Total phenols                   178 non-null float64
     Flavanoids                      178 non-null float64
     Nonflavanoid phenols            178 non-null float64
     Proanthocyanins                 178 non-null float64
@@ -493,178 +445,15 @@ dataset.info()
     memory usage: 19.5 KB
     
 
-
-```python
-dataset.Proanthocyanins.head(15)
-```
-
-
-
-
-    0     2.29
-    1     1.28
-    2     2.81
-    3     2.18
-    4     1.82
-    5     1.97
-    6     1.98
-    7     1.25
-    8     1.98
-    9     1.85
-    10    2.38
-    11    1.57
-    12    1.81
-    13    2.81
-    14    2.96
-    Name: Proanthocyanins, dtype: float64
-
-
-
-#### Acá vemos que todos los atributos son del tipo float o int, por lo tanto no es necesario convertir dichos atributos
+#### Acá vamos a normalizar los valores del dataset, para ésto utilizamos la librería de python "sklearn". Luego de normalizarlos, imprimo los primeros 10 registros para verificar.
 
 
 ```python
-dataset[dataset["Proanthocyanins"]==1.25]
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Class</th>
-      <th>Alcohol</th>
-      <th>Malic acid</th>
-      <th>Ash</th>
-      <th>Alcalinity of ash</th>
-      <th>Magnesium</th>
-      <th>Total phenols</th>
-      <th>Flavanoids</th>
-      <th>Nonflavanoid phenols</th>
-      <th>Proanthocyanins</th>
-      <th>Color intensity</th>
-      <th>Hue</th>
-      <th>OD280/OD315 of diluted wines</th>
-      <th>Proline</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>7</th>
-      <td>1</td>
-      <td>14.06</td>
-      <td>2.15</td>
-      <td>2.61</td>
-      <td>17.6</td>
-      <td>121</td>
-      <td>2.60</td>
-      <td>2.51</td>
-      <td>0.31</td>
-      <td>1.25</td>
-      <td>5.05</td>
-      <td>1.06</td>
-      <td>3.58</td>
-      <td>1295</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>1</td>
-      <td>14.21</td>
-      <td>4.04</td>
-      <td>2.44</td>
-      <td>18.9</td>
-      <td>111</td>
-      <td>2.85</td>
-      <td>2.65</td>
-      <td>0.30</td>
-      <td>1.25</td>
-      <td>5.24</td>
-      <td>0.87</td>
-      <td>3.33</td>
-      <td>1080</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>3</td>
-      <td>12.51</td>
-      <td>1.24</td>
-      <td>2.25</td>
-      <td>17.5</td>
-      <td>85</td>
-      <td>2.00</td>
-      <td>0.58</td>
-      <td>0.60</td>
-      <td>1.25</td>
-      <td>5.45</td>
-      <td>0.75</td>
-      <td>1.51</td>
-      <td>650</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>3</td>
-      <td>13.32</td>
-      <td>3.24</td>
-      <td>2.38</td>
-      <td>21.5</td>
-      <td>92</td>
-      <td>1.93</td>
-      <td>0.76</td>
-      <td>0.45</td>
-      <td>1.25</td>
-      <td>8.42</td>
-      <td>0.55</td>
-      <td>1.62</td>
-      <td>650</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>3</td>
-      <td>13.50</td>
-      <td>3.12</td>
-      <td>2.62</td>
-      <td>24.0</td>
-      <td>123</td>
-      <td>1.40</td>
-      <td>1.57</td>
-      <td>0.22</td>
-      <td>1.25</td>
-      <td>8.60</td>
-      <td>0.59</td>
-      <td>1.30</td>
-      <td>500</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-### Acá vamos a normalizar los valores del dataset
-
-
-```python
-vectorDeWine = dataset.values
+vectorDeVinos = dataset.values
 minmaxSC= preprocessing.MinMaxScaler()
-wineSC = minmaxSC.fit_transform(vectorDeWine)
+wineSC = minmaxSC.fit_transform(vectorDeVinos)
 wineDSC = pd.DataFrame(wineSC)
-wineDSC.head(15)
+wineDSC.head(10)
 ```
 
 
@@ -875,98 +664,27 @@ wineDSC.head(15)
       <td>0.835165</td>
       <td>0.547076</td>
     </tr>
-    <tr>
-      <th>10</th>
-      <td>0.0</td>
-      <td>0.807895</td>
-      <td>0.280632</td>
-      <td>0.502674</td>
-      <td>0.381443</td>
-      <td>0.380435</td>
-      <td>0.679310</td>
-      <td>0.628692</td>
-      <td>0.169811</td>
-      <td>0.621451</td>
-      <td>0.381399</td>
-      <td>0.626016</td>
-      <td>0.695971</td>
-      <td>0.878745</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>0.0</td>
-      <td>0.813158</td>
-      <td>0.146245</td>
-      <td>0.513369</td>
-      <td>0.319588</td>
-      <td>0.271739</td>
-      <td>0.420690</td>
-      <td>0.440928</td>
-      <td>0.245283</td>
-      <td>0.365931</td>
-      <td>0.317406</td>
-      <td>0.560976</td>
-      <td>0.567766</td>
-      <td>0.714693</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>0.0</td>
-      <td>0.715789</td>
-      <td>0.195652</td>
-      <td>0.561497</td>
-      <td>0.278351</td>
-      <td>0.206522</td>
-      <td>0.558621</td>
-      <td>0.510549</td>
-      <td>0.301887</td>
-      <td>0.441640</td>
-      <td>0.368601</td>
-      <td>0.544715</td>
-      <td>0.597070</td>
-      <td>0.743224</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>0.0</td>
-      <td>0.978947</td>
-      <td>0.195652</td>
-      <td>0.550802</td>
-      <td>0.041237</td>
-      <td>0.228261</td>
-      <td>0.731034</td>
-      <td>0.706751</td>
-      <td>0.566038</td>
-      <td>0.757098</td>
-      <td>0.351536</td>
-      <td>0.626016</td>
-      <td>0.534799</td>
-      <td>0.621969</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>0.0</td>
-      <td>0.881579</td>
-      <td>0.223320</td>
-      <td>0.545455</td>
-      <td>0.072165</td>
-      <td>0.347826</td>
-      <td>0.800000</td>
-      <td>0.696203</td>
-      <td>0.301887</td>
-      <td>0.804416</td>
-      <td>0.530717</td>
-      <td>0.585366</td>
-      <td>0.633700</td>
-      <td>0.905136</td>
-    </tr>
   </tbody>
 </table>
 </div>
 
 
 
+#### Divido el dataset en conjuntos de entrenamiento (70% = 124) y testing (30% = 54)
+
 
 ```python
-
+unDataset = pd.read_csv('wine_con_cabezales.csv')
+train, test = sklMS.train_test_split(unDataset, test_size=0.3)
+len(train)
+124
+len(test)
+54
 ```
+
+
+
+
+    54
+
+

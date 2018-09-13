@@ -2,3 +2,6 @@ git status
 git add .
 git commit -m "comentario acá"
 git push
+
+jupyter notebook
+
