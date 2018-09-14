@@ -7,19 +7,19 @@ Para Utilizar Árboles de decisión, necesito datos de entrenamiento, los mismos
 
 Resultados:
 
-RuleModel
-if Sex = Male and Passenger Fare = 26.269 then No  (57 / 367)
-if Sex = Female and Passenger Class = First then Yes  (97 / 4)
-if Sex = Male and Passenger Fare > 31.137 then No  (33 / 90)
-if Passenger Class = Second and Age = 28.500 then Yes  (36 / 4)
-if Passenger Fare = 24.808 and Passenger Fare > 15.373 and Age > 29.441 then Yes  (18 / 3)
-if Passenger Fare = 14.281 then Yes  (68 / 40)
-if Passenger Class = Third and Passenger Fare > 23.746 then No  (1 / 23)
-if Passenger Class = Second and Passenger Fare > 30.375 then Yes  (4 / 0)
-if No of Parents or Children on Board = 0.500 and Age = 30.441 and Passenger Fare = 28.710 and Age > 28.500 then No  (1 / 8)
-if Age = 54 then Yes  (33 / 22)
-if Age = 71 then No  (0 / 6)
-else Yes  (0 / 0)
+- RuleModel
+- if Sex = Male and Passenger Fare = 26.269 then No  (57 / 367)
+- if Sex = Female and Passenger Class = First then Yes  (97 / 4)
+- if Sex = Male and Passenger Fare > 31.137 then No  (33 / 90)
+- if Passenger Class = Second and Age = 28.500 then Yes  (36 / 4)
+- if Passenger Fare = 24.808 and Passenger Fare > 15.373 and Age > 29.441 then Yes  (18 / 3)
+- if Passenger Fare = 14.281 then Yes  (68 / 40)
+- if Passenger Class = Third and Passenger Fare > 23.746 then No  (1 / 23)
+- if Passenger Class = Second and Passenger Fare > 30.375 then Yes  (4 / 0)
+- if No of Parents or Children on Board = 0.500 and Age = 30.441 and Passenger Fare = 28.710 and Age > 28.500 then No  (1 / 8)
+- if Age = 54 then Yes  (33 / 22)
+- if Age = 71 then No  (0 / 6)
+- else Yes  (0 / 0)
 
 correct: 750 out of 915 training examples.
 
