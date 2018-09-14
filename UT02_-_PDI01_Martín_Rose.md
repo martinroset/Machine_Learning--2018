@@ -26,3 +26,4 @@ Atributos valores faltantes: Ninguno de los atributos tiene datos faltantes .
 
 Atributos con outliers: Hue, Proline, Color Intensity, Proanthocyanins, Total phenols, Magnesium, Alcalinity of ash, Ash, Malic acid, Alcohol.
 
+#### ![Ejercicio 02 (Rapidminer)](./UT02_-_PDI01/UT02_-_PDI02_-_Ejercicio_2--01.PNG)
