@@ -10,7 +10,7 @@
 
 ### <u> **UT02** </u>
 
-#### [UT02 - Práctico Individual 01](UT02_-_PDI02_Martín_Rose.md)
+#### [UT02 - Práctico Individual 01](UT02_-_PDI01_Martín_Rose.md)
 
 #### [UT02 - Práctico Individual 02](UT02_-_PDI02_Martín_Rose.md)
 
