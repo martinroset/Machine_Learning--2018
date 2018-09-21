@@ -8,7 +8,7 @@
 #### [UT01 - Práctico Individual 02](UT01_-_PDI02_-_Ej01_Martin_Rose.md)
 
 </center>
-<br>
+
 
 ### UT02
 
@@ -24,7 +24,7 @@
 
 </center>
 
-<br>
+
 
 ### UT03
 
