@@ -1,12 +1,22 @@
 ## Portfolio Machine Learning ##
 
+<u>
+
 ### UT01
+
+</u>
+<center>
 
 #### [UT01 - Práctico Individual 02](UT01_-_PDI02_-_Ej01_Martin_Rose.md)
 
-
+</center>
+<br>
+<u>
 
 ### UT02
+
+</u>
+<center>
 
 #### [UT02 - Práctico Individual 01](UT02_-_PDI01_Martín_Rose.md)
 
@@ -16,7 +26,16 @@
 
 #### [UT02 - Práctico Individual 04](UT02_-_PDI04_-_Ej_01_-_Martín_Rose.md)
 
+</center>
+
+<br>
+<u>
 
 ### UT03
 
-#### [UT03 - Práctico Individual 01](UT03_-_PDI01_-_Martin_Rose.xslx)
+</u>
+<center>
+
+#### [UT03 - Práctico Individual 01](UT03_-_PDI01_-_Martin_Rose.md)
+
+</center>
