@@ -175,15 +175,12 @@ golfD.head(15)
 
 
 ```python
-# Map string vales for Outlook column to numbers
 a = {'sunny': 1, 'overcast': 2, 'rain': 3}
 golfD.Outlook = [a[item] for item in golfD.Outlook.astype(str)]
 
-# Map string vales for Wind column to numbers
 b = {'False': 0, 'True': 1,}
 golfD.Wind = [b[item] for item in golfD.Wind.astype(str)]
 
-# Map string vales for Wind column to numbers
 c = {'no': 0, 'yes': 1,}
 golfD.Play = [c[item] for item in golfD.Play.astype(str)]
 
@@ -339,15 +336,12 @@ golfD.head(15)
 
 
 ```python
-# Map string vales for Outlook column to numbers
 d = {'sunny': 1, 'overcast': 2, 'rain': 3}
 golfEntD.Outlook = [d[item] for item in golfEntD.Outlook.astype(str)]
 
-# Map string vales for Wind column to numbers
 e = {'False': 0, 'True': 1,}
 golfEntD.Wind = [e[item] for item in golfEntD.Wind.astype(str)]
 
-# Map string vales for Wind column to numbers
 f = {'no': 0, 'yes': 1,}
 golfEntD.Play = [f[item] for item in golfEntD.Play.astype(str)]
 
@@ -521,15 +515,10 @@ validacionL = validacion.iloc[:,4]
 
 
 ```python
-# Train the naive bayes model
 naivesBayes.fit(entrenamientoF, entrenamientoL)
-
-# build a dataframe to show the expected vs predicted values
 entrenamientoD = pd.concat([validacionF, validacionL], axis=1)
 entrenamientoD["prediction"] = naivesBayes.predict(entrenamientoF)
 print(entrenamientoD)
-
-# Use the score function and output the prediction accuracy
 print ("Naive Bayes Accuracy:", naivesBayes.score(validacionF,validacionL))
 ```
 
