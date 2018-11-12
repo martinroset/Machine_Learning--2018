@@ -270,7 +270,7 @@ plt.scatter(x = wineDF.Alcohol, y = wineDF.OD280OD315, c=kmeansY, s=10, cmap='vi
 
 
 
-    <matplotlib.collections.PathCollection at 0x1e92c3ee2e8>
+    <matplotlib.collections.PathCollection at 0x2c1acb31908>
 
 
 
