@@ -11,6 +11,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 unDSData = pd.read_csv("./wine_con_nombres.csv")
 unDSName = pd.read_csv("./wineNames.csv")
+wineDF = pd.DataFrame(unDSData)
 ```
 
 
@@ -260,19 +261,16 @@ unDSData.info()
 
 
 ```python
-unKmeans = KMeans(n_clusters=3, init = 'random', max_iter = 1, random_state = 5).fit(wineDF.iloc[:,[12,1]])
-wineDF = pd.DataFrame(unDSData)
-wineDF.Class = wineDF.Class - 1
-fig, ax = plt.subplots(1, 1)
-calcCentroidesDF = pd.DataFrame(unKmeans.cluster_centers_, columns = list(wineDF.iloc[:,[12,1]].columns.values))
-wineDF.plot.scatter(x = 'Alcohol', y = 'OD280OD315', c= unKmeans.labels_, figsize=(14,9), colormap='viridis', ax=ax, mark_right=False)
-calcCentroidesDF.plot.scatter(x = 'Alcohol', y = 'OD280OD315', c = 'red', ax = ax,  s = 120, mark_right=False)
+otroKmeans = KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300, n_clusters=3, n_init=10, n_jobs=1, precompute_distances='auto', random_state=None, tol=0.0001, verbose=0)
+otroKmeans.fit(wineDF) 
+kmeansY = otroKmeans.predict(wineDF)
+plt.scatter(x = wineDF.Alcohol, y = wineDF.OD280OD315, c=kmeansY, s=10, cmap='viridis')
 ```
 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x167b764f748>
+    <matplotlib.collections.PathCollection at 0x1e92c3ee2e8>
 
 
 
@@ -282,24 +280,18 @@ calcCentroidesDF.plot.scatter(x = 'Alcohol', y = 'OD280OD315', c = 'red', ax = a
 
 
 ```python
+unKmeans = KMeans(n_clusters=3, init = 'random', max_iter = 1, random_state = 5).fit(wineDF.iloc[:,[12,1]])
+wineDF = pd.DataFrame(unDSData)
+wineDF.Class = wineDF.Class - 1
+fig, ax = plt.subplots(1, 1)
+calcCentroidesDF = pd.DataFrame(unKmeans.cluster_centers_, columns = list(wineDF.iloc[:,[12,1]].columns.values))
+wineDF.plot.scatter(x = 'Alcohol', y = 'OD280OD315', c= unKmeans.labels_, figsize=(14,9), colormap='viridis', ax=ax, mark_right=False)
+calcCentroidesDF.plot.scatter(x = 'Alcohol', y = 'OD280OD315', c = 'red', ax = ax,  s = 120, mark_right=False)
 otrokmeans = KMeans(n_clusters=3, init = 'random', max_iter = 1, random_state = 5).fit(wineDF.iloc[:,[12,1]])
-y_kmeans = otroKmeans.predict(wineDF)
-wineDF.plot.scatter(x = 'Alcohol', y = 'OD280OD315', c= y_kmeans, figsize=(12,8), colormap='viridis', ax=ax, mark_right=False)
-otroKmeans = KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300, n_clusters=3, n_init=10, n_jobs=1, precompute_distances='auto', random_state=None, tol=0.0001, verbose=0)
-otroKmeans.fit(wineDF) 
-kmeansY = otroKmeans.predict(wineDF)
-plt.scatter(x = wineDF.Alcohol, y = wineDF.OD280OD315, c=y_kmeans, s=10, cmap='viridis')
 ```
 
 
-
-
-    <matplotlib.collections.PathCollection at 0x167b7750dd8>
-
-
-
-
-![png](output_5_1.png)
+![png](output_5_0.png)
 
 
 
