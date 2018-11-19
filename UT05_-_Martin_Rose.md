@@ -275,7 +275,7 @@ plt.scatter(x = wineDF.Alcohol, y = wineDF.OD280OD315, c=kmeansY, s=10, cmap='vi
 
 
 
-![png](output_4_1.png)
+![png](./UT05/output_5_1.png)
 
 
 
@@ -291,7 +291,7 @@ otrokmeans = KMeans(n_clusters=3, init = 'random', max_iter = 1, random_state = 
 ```
 
 
-![png](output_5_0.png)
+![png](./UT05/output_5_0.png)
 
 
 
