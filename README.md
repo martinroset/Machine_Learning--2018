@@ -45,5 +45,10 @@
 #### [UT05 - Clustering y Modelos Jerárquicos](UT05_-_Martin_Rose.md)
 
 
+### UT06 - Ensambles
+
+#### [UT06 - Ensambles](UT06_-_Ensambles_-_Martin_Rose.md)
+
+
 
 
