@@ -1,0 +1,81 @@
+# Att	Nombre	Descripción	Tipo de dato
+
+| Nº  |   Name  |            Description                |     Type of Data       |
+|-----|---------|---------------------------------------|------------------------|
+|     |         |                                       |                        |  
+|01   |	id	|Número identificador del paciente      |	Integer          |
+|02   |	ccf	|Número de seguridad social del paciente|	Integer          |
+|03   |	age	|Años de edad                   	|       Integer          |
+|04   |	sex	|Sexo	                                |Integer (1 = male, 0 = female)|
+|05   |	painloc	|Ubicación del dolor en el pecho	|Integer (1 = substernal, 0 = otherwise)|
+|06   |	painexer|	Dolor provocado por esfuerzo	|Integer (1 = provoked by exertion, 0 = otherwise)|
+|07   |	relrest	|Dolor aliviado luego de descansar	|Integer (1 = relieved after rest, 0 = otherwise)|
+|08   |	pncande |	Suma de los atributos 5, 6 y 7	|Integer|
+|09   |	cp	|Tipo de dolor en el pecho	        |Integer (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, 4 = asymptomatic )|
+|10   |	trestbps|Presión sanguínea en reposo. Medida en mmHg al ingresar al hospital	|Integer|
+|11   |	htn	|Paciente tiene hipertensión	        |Integer (1 = hypertension, 0 = no hypertension)|
+|12   |	chol	|Colesterol sérico. Medido en mg/dl	|Integer|
+|13   |	smoke	|Si el paciente es fumador      	|Integer (1 = yes, 0 = no)|
+|14   |	cigs	|Cigarros por día           	        |Integer|
+|15   |	years	|Número de años de fumador      	|Integer|
+|16   |	fbs	|Indica si el azúcar en sangre en ayunas es mayor a 120 mg/dl	|Integer (1 = true, 0 = false)|
+|17   |	dm	|Antecedentes de diabetes	        |Integer (1 = history of diabetes, 0 = no such history)|
+|18   |	famhist	|Antecedentes de enfermedad coronaria arterial en la familia	|Integer (1 = yes, 0 = no) |
+|19   |	restecg	|Resultados electrocardiográficos en reposo	|Integer ( 0 = normal, 1 = having ST-T wave abnormality, 2 = showing probable or definite left ventricular hypertrophy by Estes' criteria|
+|20   |	ekgmo	|Mes de la lectura del ejercicio del Electrocardiograma	|Integer|
+|21   |	ekgday	|Día de la lectura del ejercicio del Electrocardiograma	|Integer|
+|22   |	ekgyr	|Año de la lectura del ejercicio del Electrocardiograma	|Integer|
+|23   |	dig	|Indica si se utilizó digitalis durante el Electrocardiograma	|Integer (1 = yes, 0 = no)|
+|24   |	prop	|Indica si se utilizó algún betabloqueante durante el Electrocardiograma	|Integer (1 = yes, 0 = no)|
+|25   |	nitr	|Indica si se utilizó algún nitrato durante el Electrocardiograma	|Integer (1 = yes, 0 = no)|
+|26   |	pro	|Indica si se utilizó algún bloqueador de los canales de calcio durante el Electrocardiograma	|Integer (1 = yes, 0 = no)|
+|27   |	diuretic|Indica si se utilizó algún diurético durante el Electrocardiograma	|Integer (1 = yes, 0 = no)|
+|28   |	proto	|Protocolo utilizado para el Electrocardiograma	|Integer (1 = Bruce, 2 = Kottus, 3 = McHenry, 4 = fast Balke, 5 = Balke, 6 = Noughton, 7 = bike 150 kpa min/min, 8 = bike 125 kpa min/min, 9 = bike 100 kpa min/min, 10 = bike 75 kpa min/min, 11 = bike 50 kpa min/min, 12 = arm ergometer|
+|29   |	thaldur	|Duración del test del ejercicio (en minutos)	|Integer|
+|30   |	thaltime|Instante en el que se observó una depresión en la medida del segmento ST	|Integer|
+|31   |	met	|Resultado del ejercicio en mets (Metabolic equivalents)	|Integer|
+|32   |	thalach	|Mayor ritmo cardíaco observado	        |Integer|
+|33   |	thalrest|Ritmo cardíaco en reposo	        |Integer|
+|34   |	tpeakbps|	Pico de la presión arterial en el ejercicio en la primera parte	|Integer|
+|35   |	tpeakbpd|	Pico de la presión arterial en el ejercicio en la segunda parte	|Integer|
+|36   |	dummy	|Indefinido				|Integer|
+|37   |	trestbpd|Presión sanguínea en reposo	        |Integer|
+|38   |	exang	|Angina inducida por el ejercicio	|Integer (1 = yes, 0 = no)|
+|39   |	xhypo	|No se encontró información certera	|Integer (1 = yes, 0 = no)|
+|40   |	oldpeak	|Depresión del segmento ST inducida por el ejercicio en relación con al reposo.	|Integer|
+|41   |	slope	|Pendiente del segmento ST del ejercicio máximo	|Integer (1 = upsloping, 2 = flat, 3 = downsloping)|
+|42   |	rldv5	|Altura en reposo	                |Integer|
+|43   |	rldv5e	|Altura en el ejercicio máximo	        |Integer|
+|44   |	ca	|Número de vasos principales coloreados por fluoroscopia	|Integer|
+|45   |	restckm	|Irrelevante	- 			||
+|46   |	exerckm	|Irrelevante	- 			||
+|47   |	restef	|Fracción de eyección en reposo		|Integer|
+|48   |	restwm	|Movimiento anormal en el movimiento de las paredes del corazón en reposo	|Integer (0 = none,1 = mild or moderate, 2 = moderate or severe, 3 = akinesis or dyskmem)|
+|49   |	exeref	|Fracción de eyección en el ejercicio	|Integer|
+|50   |	exerwm	|Movimiento del corazón en el reposo	|Integer|
+|51   |	thal	|Prueba de esfuerzo con talio	        |Integer (3 = normal, 6 = fixed defect, 7 = reversable defect)|
+|52   |	thalsev	|No se usa	-			||
+|53   |	thalpul	|No se usa	-			||
+|54   |	earlobe	|No se usa	-			||
+|55   |	cmo	|Mes de la Cateterización cardiaca	|Integer|
+|56   |	cday	|Día de la Cateterización cardiaca	|Integer|
+|57   |	cyr	|Año de la Cateterización cardiaca	|Integer|
+|58   |	num	|Diagnóstico de enfermedad del corazón (estado de la angiografía)	|Integer (0 = < 50% diameter narrowing, 1 = > 50% diameter narrowing)|
+|59   |	lmt	|Indefinido	- 			||
+|60   |	ladprox	|Indefinido	- 			||
+|61   |	laddist	|Indefinido	- 			||
+|62   |	diag	|Indefinido	- 			||
+|63   |	cxmain	|Indefinido	- 			||
+|64   |	ramus	|Indefinido	- 			||
+|65   |	om1	|Indefinido	- 			||
+|66   |	om2	|Indefinido	- 			||
+|67   |	rcaprox	|Indefinido	- 			||
+|68   |	rcadist	|Indefinido	- 			||
+|69   |	lvx1	|No se usa	- 			||
+|70   |	lvx2	|No se usa	- 			||
+|71   |	lvx3	|No se usa	- 			||
+|72   |	lvx4	|No se usa	- 			||
+|73   |	lvf	|No se usa	- 			||
+|74   |	cathef	|No se usa	- 			||
+|75   |	junk	|No se usa	- 			||
+|76   |	name	|Nombre del paciente (reemplazado por “name” en los data sets)	|String|

@@ -1,0 +1,25 @@
+
+|Attributo|Relevancia	|Media	|Min|	Max|	Outliers|
+|---------|-------------|-------|---|------|------------|
+|age	  |La edad es un factor de riesgo, dado que a medida que la persona envejece aumenta las probabilidades de padecer alguna enfermedad relacionada al corazón (Además que en la mayoría de la bibliografía utilizada se remarcaba como uno de los mayores factores de riesgo).|	53.481	|28|	77|	0|
+|sex	  |El riesgo de padecer una enfermedad al corazón es más alto en el hombre que en la mujer. Aunque para esta última, luego de la menopausia aumentan sus probabilidades de padecer alguna enfermedad de este tipo.|	0.791|	0|	1|	0|
+|cp	  |El tipo de dolor en el pecho es un factor de suma relevancia también dado que el tipo de dolor en el pecho podría ser un indicador del tipo de enfermedad del corazón que se padece. Las cuales pueden variar en síntomas y severidad.|	3.254|	1|	4|	0|
+|trestbps |La presión sanguínea medida cuando el paciente se encuentra en un estado de reposo constituye un factor importante dado que si la misma es alta significa que alguna vena o arteria se encuentra obstruida por lo cual el corazón necesita aumentar la fuerza con la que bombea la sangre para poder llegar a todo el cuerpo. En el caso de que la misma fuera muy baja podría estar indicando de que el corazón no está funcionando correctamente.| 132.259|	80|	200|	60|
+|chol	  |El colesterol del paciente es sumamente relevante dado que un colesterol alto podría provocar que alguna arteria se obstruya impidiendo al corazón bombear sangre hacia algunas zonas del cuerpo.|	247.808|	85|	603|	202|
+|fbs	  |El nivel de azúcar en sangre puede indicar si el paciente padece de diabetes, enfermedad que aumenta el riesgo de padecer una enfermedad cardíaca.|	0.167|	0|	1|	90|
+|restecg  |	Con esto se puede detectar si el paciente padece alguna condición cardiaca.|	0.603|	0|	2|	2|
+|thalach  |	Un mayor ritmo cardiaco podría indicar que el paciente padece de taquicardia.|	137.299|	60|	202|	55|
+|exang	  |Puede indicar de que el paciente tuvo un preinfarto, en la mayoría de los casos se debe a esto.|	0.391|	0|	1|	55|
+|oldpeak  |Cuando este valor está descendido (por debajo de 0) indica una isquemia (muerte de tejido por falta de irrigación), y en caso de estar elevado indica un futuro  infarto. El segmento ST nos dice el tiempo entre el final de una contracción de los ventrículos, hasta el comienzo de la repolarización (estado de reposo).|	0.870|	-2600|	6200|	62|
+|slope	  |Diferencia los pacientes sin enfermedades coronarias, de los pacientes con enfermedad coronaria de uno, dos, o tres vasos.|	1.766|	0|	3|	308|
+|ca	  |Permite ver la estructura interna del paciente lo cual podría indicar si hubiera alguna obstrucción en algún vaso, vena o arteria.|	0.699|	0|	3|	609|
+|thal	  |Permite indicar si el flujo de sangre dentro del corazón del paciente es normal o no.|	5.068|	3|	7|	486|
+|num	  |Es lo que se busca predecir luego con el uso de nuevos datos, indica si el paciente padece una enfermedad cardiaca o no.|	1.129|	0|	4|	0|
+|painloc  |El lugar de donde proviene el dolor del pecho ayuda a poder identificar si el paciente padece o podría padecer una enfermedad cardíaca.|	0.921|	0|	1|	282|
+|dm	  |La diabetes es un factor de riesgo, el cual intensifica más su riesgo si el paciente que la padece es mujer. Es una de los causantes de enfermedades cardíacas.|	0.958|	0|	1|	804|
+|famhist  |Las probabilidades de que un paciente padezca de alguna enfermedad cardiaca aumentan si en su familia alguno la padece o padeció. Es decir si sus predecesores la padecieron o padecen.|	0.564|	0|	1|	422|
+|trestbpd |Una anomalía en la presión sanguínea del paciente en estado de reposo podría ser un indicador, por ejemplo, de que este padece de diabetes por ejemplo lo cual conduce a una alto riesgo de padecer una enfermedad cardíaca.|	86.623|	50|	120|	60|
+|restwm	  |Indica si el paciente padece de alguna anomalía en el corazón lo cual, en caso de padecer, podría ser causante de alguna enfermedad cardíaca.|	1.033|	0|	3|	869|
+|thalrest |Un ritmo cardíaco anormal en estado de reposo podría ser causa de alguna anomalía cardíaca.|	75.488|	37|	139|	56|
+|painexer |El dolor en el pecho durante el ejercicio podría ser provocado por alguna enfermedad cardiaca. Por ende es un factor relevante si se quiere poder predecir si el paciente padece alguna o no.|	0.593|	0|	1|	282|
+|relrest  |Si el dolor o molestia persiste luego de la actividad física, cuando el paciente ya está descansado, podría indicar la presencia de alguna enfermedad cardíaca.|	0.672|	0|	1|	286|

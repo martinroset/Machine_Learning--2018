@@ -1,10 +1,10 @@
 ## Portfolio Machine Learning ##
 
 
+
 ### UT01
 
 #### [UT01 - Práctico Individual 02](UT01_-_PDI02_-_Ej01_Martin_Rose.md)
-
 
 
 
@@ -20,11 +20,9 @@
 
 
 
-
 ### UT03
 
 #### [UT03 - Práctico Individual 01](UT03_-_PDI01_-_Martin_Rose.md)
-
 
 
 
@@ -45,10 +43,13 @@
 #### [UT05 - Clustering y Modelos Jerárquicos](UT05_-_Martin_Rose.md)
 
 
+
 ### UT06 - Ensambles
 
 #### [UT06 - Ensambles](UT06_-_Ensambles_-_Martin_Rose.md)
 
 
 
+### Proyecto Final (Incluye UT07)
 
+#### [Proyecto Final](Proyecto_Final.md)
