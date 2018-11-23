@@ -3,7 +3,7 @@
 
 
 
-![corazon.jpg](attachment:corazon.jpg)
+![corazon.jpg](corazon.jpg)
 
 Este problema está basado en el estudio de enfermedades cardíacas. Para esto me baso en el estudio de un conjunto de 4 datasets correspondientes al relevamiento de datos tomados de 4 lugares geográficamente distantes (Cleveland / EE.UU. EAST, Hungría, Suiza, y VA Long Beach / EE.UU. WEST), obtenidos del repositorio de Machine Learning, del sitio web de la Universidad de California (UCI). La URL donde el mismo está disponible, es la siguiente: https://archive.ics.uci.edu/ml/datasets/heart+Disease .
 Dado lo costoso de los tratamientos médicos para enfermedades cardíacas, la idea es predecir los pacientes con mayor riesgo de poseer enfermedades cardíacas (tanto en la actualidad como a futuro), y así poder gestionar más eficientemente los recursos para tratar este tipo de pacientes de forma preventiva, y no reactiva. Sabiendo que los costos de tratamiento reactivo son muchísimos mayores que los de tratamiento preventivo, esto nos ayudaría a disminuir la cantidad de tratamientos reactivos, y a su vez evitar posibles cuadros cardíacos.
