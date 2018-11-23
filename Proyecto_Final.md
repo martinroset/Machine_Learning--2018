@@ -14,11 +14,11 @@ Con respecto al conjunto de datasets elegidos para este problema, la mayoría de
 
 ### Sistema Circulatorio Humano ###
 
-![aparato-circulatorio-humano.jpg](attachment:aparato-circulatorio-humano.jpg)
+![aparato-circulatorio-humano.jpg](aparato-circulatorio-humano.jpg)
 
 El Sistema Circulatorio tiene como función principal la distribución de nutrientes, hormonas, gases (O2), y células sanguíneas a las células en el resto del cuerpo. También se encarga de recoger los desperdicios generados por el metabolismo de las células del cuerpo (por ejemplo, CO2). Está compuesto por el corazón, vasos sanguíneos (venas, capilares, y arterias) y la sangre. Los órganos que se encargan de eliminar los mencionados desechos son los riñones (a través de la orina), y los pulmones (vía aérea, al exhalar CO2). Para entender mejor el problema que estamos abordando, es necesario entender (al menos básicamente) su funcionamiento. Para ésto, a continuación se expone una breve introducción (mini resúmen, a grandes rasgos) de cómo funciona el sistema:
 
-![partes-del-corazon-3.jpg](attachment:partes-del-corazon-3.jpg)
+![partes-del-corazon-3.jpg](partes-del-corazon-3.jpg)
 
 **1.**	El corazón recibe sangre desoxigenada a través de las venas cavas (superior e inferior), esta sangre entra en el aurículo derecho.
 
