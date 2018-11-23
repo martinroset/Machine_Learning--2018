@@ -3,8 +3,7 @@
 
 
 
-![./Imagenes_Proyecto_Final/corazon.jpg](attachment:./Imagenes_Proyecto_Final/
-corazon.jpg)
+![corazon.jpg](attachment:corazon.jpg)
 
 Este problema está basado en el estudio de enfermedades cardíacas. Para esto me baso en el estudio de un conjunto de 4 datasets correspondientes al relevamiento de datos tomados de 4 lugares geográficamente distantes (Cleveland / EE.UU. EAST, Hungría, Suiza, y VA Long Beach / EE.UU. WEST), obtenidos del repositorio de Machine Learning, del sitio web de la Universidad de California (UCI). La URL donde el mismo está disponible, es la siguiente: https://archive.ics.uci.edu/ml/datasets/heart+Disease .
 Dado lo costoso de los tratamientos médicos para enfermedades cardíacas, la idea es predecir los pacientes con mayor riesgo de poseer enfermedades cardíacas (tanto en la actualidad como a futuro), y así poder gestionar más eficientemente los recursos para tratar este tipo de pacientes de forma preventiva, y no reactiva. Sabiendo que los costos de tratamiento reactivo son muchísimos mayores que los de tratamiento preventivo, esto nos ayudaría a disminuir la cantidad de tratamientos reactivos, y a su vez evitar posibles cuadros cardíacos.
@@ -15,11 +14,11 @@ Con respecto al conjunto de datasets elegidos para este problema, la mayoría de
 
 ### Sistema Circulatorio Humano ###
 
-![./Imagenes_Proyecto_Final/aparato-circulatorio-humano.jpg](attachment:./Imagenes_Proyecto_Final/aparato-circulatorio-humano.jpg)
+![aparato-circulatorio-humano.jpg](attachment:aparato-circulatorio-humano.jpg)
 
 El Sistema Circulatorio tiene como función principal la distribución de nutrientes, hormonas, gases (O2), y células sanguíneas a las células en el resto del cuerpo. También se encarga de recoger los desperdicios generados por el metabolismo de las células del cuerpo (por ejemplo, CO2). Está compuesto por el corazón, vasos sanguíneos (venas, capilares, y arterias) y la sangre. Los órganos que se encargan de eliminar los mencionados desechos son los riñones (a través de la orina), y los pulmones (vía aérea, al exhalar CO2). Para entender mejor el problema que estamos abordando, es necesario entender (al menos básicamente) su funcionamiento. Para ésto, a continuación se expone una breve introducción (mini resúmen, a grandes rasgos) de cómo funciona el sistema:
 
-![./Imagenes_Proyecto_Final/partes-del-corazon-3.jpg](attachment:./Imagenes_Proyecto_Final/partes-del-corazon-3.jpg)
+![partes-del-corazon-3.jpg](attachment:partes-del-corazon-3.jpg)
 
 **1.**	El corazón recibe sangre desoxigenada a través de las venas cavas (superior e inferior), esta sangre entra en el aurículo derecho.
 
